@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Select Tone</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="closePage()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let tone of tones" (click)="selectTone(tone)">
+      <ion-label>{{ tone }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

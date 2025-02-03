@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>Settings</ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-button (click)="closePage()">
+      <ion-icon name="close"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Default Tone</ion-label>
+      <ion-select [(ngModel)]="settings.defaultTone"(ionChange)="saveSettings()">
+        <ion-select-option value="Default">Default</ion-select-option>
+        <ion-select-option value="Beep">Beep</ion-select-option>
+        <ion-select-option value="Chime">Chime</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Dark Mode</ion-label>
+      <ion-toggle [(ngModel)]="settings.darkMode" (ionChange)="saveSettings()"></ion-toggle>
+    </ion-item>
+    
+  </ion-list>
+</ion-content>

@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Add-alarm</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closePage()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ <ion-item>
+  <ion-label position="stacked">Label</ion-label>
+  <ion-input placeholder="Enter Alarm label"[(ngModel)]="alarm.label"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked"> Alarm Time </ion-label>
+    <ion-datetime [(ngModel)]="alarm.time" presentation="date-time" placeholder="Select Time"></ion-datetime>
+  </ion-item>
+  <ion-item>
+  <ion-label >Tone</ion-label>
+  <ion-button fill="outline"  (click)="goToToneSelection()"> Select Tone </ion-button>
+  </ion-item>
+ <ion-item>
+  <ion-label>Repeat</ion-label>
+  <ion-select [(ngModel)]="alarm.repeat">
+    <ion-select-option value="none">None</ion-select-option>
+    <ion-select-option value="daily">Daily</ion-select-option>
+    <ion-select-option value="Weekly">Weekly</ion-select-option>
+  </ion-select>
+ </ion-item>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="primary">
+  <ion-button expand="block" (click)="saveAlarm()"> Save Alarm </ion-button>
+  </ion-toolbar>
+ </ion-footer>

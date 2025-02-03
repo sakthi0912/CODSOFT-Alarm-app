@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+.margin-space{
+    margin: 10px;
+}
+ion-toolabar{
+    --background : #3880ff;
+    --color:white;
+}
+ion-button{
+    --background :transparent ;
+    --color : black ;
+    font-weight: bold;
+
+}
+ion-item{
+    margin-top: 16px;
+}
+
+.button{
+    margin : 5px;
+    margin-top: 10px;
+}
